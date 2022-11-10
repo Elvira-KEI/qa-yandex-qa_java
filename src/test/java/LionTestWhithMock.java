@@ -7,15 +7,11 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import java.util.List;
-
 @RunWith(MockitoJUnitRunner.class)
-public class LionTest2 {
-
+public class LionTestWhithMock {
     private  int kittensCount = 1;
     @Mock
     Feline feline;
-
-
     @Test
     public void getFoodTest() throws Exception {
             Lion lion = new Lion("Самец", feline);
@@ -27,7 +23,5 @@ public class LionTest2 {
             Lion lion = new Lion("Самец", feline);
             Mockito.when(feline.getKittens()).thenReturn(kittensCount);
             Assert.assertEquals(1, lion.getKittens());
-
-
     }
 }
