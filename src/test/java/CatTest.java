@@ -19,7 +19,6 @@ public void init (){
 }
     @Mock
      Feline feline;
-
     @Test
     public void getSoundReturnValidValue(){
         Cat cat = new Cat(feline);
@@ -27,7 +26,6 @@ public void init (){
         String actualSound = cat.getSound();
         Assert.assertEquals("Cat sound is incorrect",expectedSound,actualSound);
     }
-
     @Test
     public void getFoodReturnValidValue() throws Exception {
         Cat cat = new Cat(feline);

@@ -5,13 +5,10 @@ import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
-
 import java.util.List;
 
 @RunWith(MockitoJUnitRunner.class)
-
 public class FelineTest {
-
     @Spy
     private Feline feline;
 
@@ -21,7 +18,6 @@ public class FelineTest {
         Mockito.when(feline.getFood("Хищник")).thenReturn(listEat);
         Assert.assertEquals("Еда хищника - Животные, Птицы, Рыба", listEat, feline.eatMeat());
     }
-
     @Test
     public void getKittensReturnValidValue(){
         Feline feline = new Feline();
@@ -29,7 +25,6 @@ public class FelineTest {
         int actualKittensCount = feline.getKittens();
         Assert.assertEquals("Kittens count is incorrect",expectedKittensCount,actualKittensCount);
     }
-
     @Test
     public void getFamilyReturnValidValue(){
         Feline feline = new Feline();
@@ -37,6 +32,6 @@ public class FelineTest {
         String actualFamily = feline.getFamily();
         Assert.assertEquals("Family is incorrect",expectedFamily,actualFamily);
     }
-    }
+}
 
 
